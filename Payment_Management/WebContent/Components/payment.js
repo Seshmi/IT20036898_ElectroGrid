@@ -1,3 +1,9 @@
+$(document).ready(function() 
+{  
+		$("#alertSuccess").hide();  
+	    $("#alertError").hide(); 
+}); 
+
 $(document).on("click", "#btnSave", function(event)
 { 
 // Clear alerts---------------------
@@ -117,49 +123,51 @@ if (status == "success")
 }
 
 
-// CLIENT-MODEL================================================================
+// CLIENT-MODEL========================
 function validatePaymentForm()
 {
 	// HOLDER NAME
 	if ($("#holder_name").val().trim() == "")
 	{
-	return "Insert Holder Name.";
+	return "Please Insert Holder's Name.";
 	}
 	// CARD TYPE
 	if ($("#ctype").val().trim() == "")
 	{
-	return "Insert Card Type.";
+	return "Please Insert Card Type.";
 	}
 	// CARD NUMBER
 	if ($("#card_no").val().trim() == "")
 	{
-	return "Insert Card Number.";
+	return "Please Insert Card Number.";
 	}
 	// CVV
 	if ($("#cvv").val().trim() == "")
 	{
-	return "Insert CVV.";
+	return "Please Insert CVV.";
 	}
+	
 	// EXPIRE MONTH
 	if ($("#exp_month").val().trim() == "")
 	{
-	return "Insert Expire Month.";
+	return "Please Insert Expire Month.";
 	}
 	// EXPIRE YEAR
 	if ($("#exp_year").val().trim() == "")
 	{
-	return "Insert Expire Year.";
+	return "Please Insert Expire Year.";
 	}
 	// TOTAL AMOUNT
 	if ($("#total").val().trim() == "")
 	{
-	return "Insert Total Amount.";
+	return "Please Insert Total Amount.";
 	}
 
 	// PAYED DATE
 	if ($("#pay_date").val().trim() == ""){
 		
-		return "Insert Payment Date.";
+		return "Please Insert Payment Date.";
 	}
+	
 	return true;
 }
